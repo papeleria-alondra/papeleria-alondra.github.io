@@ -1,0 +1,221 @@
+html, body {
+    height:100%;
+}
+body{
+	font-family: Cambria, Palatino, "Palatino Linotype", "Palatino LT STD", Georgia, serif;
+    background: #333 url(imagenes/calavera.png) repeat top left;
+	font-weight: 400;
+	font-size: 15px;
+	color: #f0f0f0;
+	overflow-y: scroll;
+}
+/** Logo, Menu y facebook */
+#header{
+	position: absolute;
+	z-index: 2000;
+    left: 0px;
+	width: 190px;
+	top: 0px;
+}
+#logo{
+	position: absolute;
+	z-index: 2000;
+	width: 112px;
+	height: 112px; 	
+	top: 5px;
+	left: 192px;
+    -webkit-box-shadow:2px 2px 5px #888888;	
+    box-shadow:2px 2px 5px #888888;
+    border-radius: 8px;
+    padding:0 4px 0 4px;
+    margin: auto auto auto auto;
+    background: rgba(255, 255, 255, 1);       
+}
+#googleplus{
+	position: absolute;
+	z-index: 2000;
+	width: 32px;
+	height: 32px; 	
+	top: 130px;
+	left: 220px;
+    -webkit-box-shadow:2px 2px 5px #888888;	
+    box-shadow:2px 2px 5px #888888;
+    margin: auto auto auto auto;
+    border-radius: 4px;
+    background: rgba(255, 255, 255, 1);       
+}
+#facebook{
+	position: absolute;
+	z-index: 2000;
+	width: 32px;
+	height: 32px; 	
+	top: 130px;
+	left: 260px;
+    -webkit-box-shadow:2px 2px 5px #888888;	
+    box-shadow:2px 2px 5px #888888;
+    margin: auto auto auto auto;
+    border-radius: 4px;
+    background: rgba(255, 255, 255, 1);       
+}
+/** Botones de Navegacion */
+#navigation {
+	margin-top: 10px;
+	width: 190px;
+	display:block;
+	list-style:none;
+	z-index:3;
+}
+#navigation a{
+	color: #444;
+	display: block;
+	background: #fff;
+	background: rgba(255,255,255,0.9);
+    /** interlineado */
+	line-height: 22px;
+    /** top right bottom left */
+	padding: 0px 6px;
+	text-transform: uppercase;
+	margin-bottom: 6px;
+	box-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+	font-size: 14px;
+}
+#navigation a:hover {
+	background: #ddd;
+}
+/** Division donde esta el contenido de la pagina */
+.content{
+	top: 177px;
+	position: relative;
+	padding-bottom: 10px;
+}
+.content h2{
+	font-size: 38px;
+	padding: 5px 0px 10px 0px;
+	margin-top: 1px;
+	color: #fff;
+	color: rgba(255,255,255,0.9);
+	text-shadow: 0px 1px 1px rgba(0,0,0,0.3);
+}
+.content h3{
+	font-size: 48px;
+	padding: 5px 0px 10px 0px;
+	margin-top: 0px;
+	color: #fff;
+	color: rgba(255,255,255,0.9);
+	-webkit-text-fill-color: white;
+	-webkit-text-stroke-color: black;
+	-webkit-text-stroke-width: 2.5px;		
+}
+.content h4{
+	font-size: 16px;
+	padding: 5px 0px 10px 0px;
+	margin-top: 0px;
+	color: #fff;
+	color: rgba(255,255,255,0.9);
+	text-shadow: 0px 1px 1px rgba(0,0,0,15);
+}
+.content h5{
+	font-size: 16px;
+	padding: 5px;
+	line-height: 24px;
+	color: #fff;
+	display: inline-block;
+	background: black;
+	padding: 5px;
+	margin: 3px 0px;
+}
+.content p{
+	font-size: 18px;
+	padding: 5px;
+	line-height: 24px;
+	color: #fff;
+	text-shadow: 0px 1px 1px rgba(0,0,0,1);
+}
+.dg-container{
+	height: 200px;
+	position: relative;
+}
+.dg-wrapper{
+	width: 141px;
+	height: 106px;
+	margin: 0 auto;
+	position: relative;
+	-webkit-transform-style: preserve-3d;
+	-moz-transform-style: preserve-3d;
+	-o-transform-style: preserve-3d;
+	-ms-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+	-webkit-perspective: 1000px;
+	-moz-perspective: 1000px;
+	-o-perspective: 1000px;
+	-ms-perspective: 1000px;
+	perspective: 1000px;
+}
+.dg-wrapper a{
+	width: 146px;
+	height: 106px;
+	display: block;
+	position: absolute;
+	left: 0;
+	top: 0;
+	background: transparent no-repeat top left;
+	box-shadow: 0px 10px 20px rgba(0,0,0,0.3);
+}
+.dg-wrapper a.dg-transition{
+	-webkit-transition: all 0.5s ease-in-out;
+	-moz-transition: all 0.5s ease-in-out;
+	-o-transition: all 0.5s ease-in-out;
+	-ms-transition: all 0.5s ease-in-out;
+	transition: all 0.5s ease-in-out;
+}
+.dg-wrapper a img{
+	display: block;
+	padding: 0px 0px 0px 0px;
+}
+.dg-wrapper a div{
+	font-style: italic;
+	text-align: center;
+	line-height: 50px;
+	text-shadow: 1px 1px 1px rgba(255,255,255,0.5);
+	color: #333;
+	font-size: 14px;
+	width: 100%;
+	bottom: -55px;
+	display: none;
+	position: absolute;
+}
+.dg-wrapper a.dg-center div{
+	display: block;
+}
+.dg-container nav{
+	width: 70px;
+	position: absolute;
+	z-index: 1000;
+	bottom: -40px;
+	left: 45%;
+	margin-left: -29px;   
+}
+.dg-container nav span{
+	text-indent: -9000px;
+	float: left;
+	cursor:pointer;
+	width: 24px;
+	height: 25px;
+	opacity: 0.8;
+	background: transparent url(../imagenes/arrows.png) no-repeat top left;
+}
+.dg-container nav span:hover{
+	opacity: 1;
+}
+.dg-container nav span.dg-next{
+	background-position: top right;
+	margin-left: 10px;
+}
+#footer{
+	position: absolute;
+	z-index: 2000;
+	width: 100%;
+	height: 150px;
+	bottom: 0px;
+	background: #000;
+}
