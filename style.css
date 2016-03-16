@@ -1,4 +1,4 @@
-/** Tamaño del Cuerpo del documento **/
+/** TamaÃ±o del Cuerpo del documento **/
 html, body {
     height:100%;
 }
@@ -6,7 +6,7 @@ html, body {
 /** - Tipo de letra, Color e Imagen del Fondo **/
 body{
 	font-family: Cambria, Palatino, "Palatino Linotype", "Palatino LT STD", Georgia, serif;
-	background: #B2F941 url(imagenes/primavera.png) repeat top left;
+	background: #A5DBF0 url(imagenes/primavera.png) repeat top left;
 	font-weight: 400;
 	font-size: 20px;
 	color: #B2F941;
