@@ -1,19 +1,22 @@
+/** Tamaño del Cuerpo del documento **/
 html, body {
     height:100%;
 }
+/** Estilo del Cuerpo del documento **/
+/** - Tipo de letra, Color e Imagen del Fondo **/
 body{
 	font-family: Cambria, Palatino, "Palatino Linotype", "Palatino LT STD", Georgia, serif;
-	background: #333 url(imagenes/calavera.png) repeat top left;
+	background: #333 url(imagenes/primavera.png) repeat top left;
 	font-weight: 400;
 	font-size: 20px;
-	color: #f0f0f0;
+	color: #B2F941;
 	overflow-y: scroll;
 }
 /** Logo, Menu y facebook */
 #header{
 	position: absolute;
 	z-index: 2000;
-    left: 0px;	
+    	left: 0px;	
 	width: 205px;
 	top: 120px;
 }
@@ -25,12 +28,12 @@ body{
 	top: 5px;
 	left: 45px;
 	display: table-column;
-    -webkit-box-shadow:2px 2px 5px #888888;	
-    box-shadow:2px 2px 5px #888888;
-    border-radius: 8px;
-    padding:0 8px 0 8px;
-    margin: auto auto auto auto;
-    background: rgba(255, 255, 255, 1);       
+    	-webkit-box-shadow:2px 2px 5px #888888;	
+    	box-shadow:2px 2px 5px #888888;
+    	border-radius: 8px;
+    	padding:0 8px 0 8px;
+    	margin: auto auto auto auto;
+    	background: rgba(255, 255, 255, 1);       
 }
 #googleplus{
 	position: absolute;
@@ -39,10 +42,10 @@ body{
 	height: 32px; 	
 	top: 510px;
 	left: 90px;
-    -webkit-box-shadow:2px 2px 5px #888888;	
-    box-shadow:2px 2px 5px #888888;
-    margin: auto auto auto auto;
-    background: rgba(255, 255, 255, 0);       
+    	-webkit-box-shadow:2px 2px 5px #888888;	
+    	box-shadow:2px 2px 5px #888888;
+    	margin: auto auto auto auto;
+    	background: rgba(255, 255, 255, 0);       
 }
 #facebook{
 	position: absolute;
@@ -51,10 +54,10 @@ body{
 	height: 32px; 	
 	top: 560px;
 	left: 90px;
-    -webkit-box-shadow:2px 2px 5px #888888;	
-    box-shadow:2px 2px 5px #888888;
-    margin: auto auto auto auto;
-    background: rgba(255, 255, 255, 0);       
+    	-webkit-box-shadow:2px 2px 5px #888888;	
+    	box-shadow:2px 2px 5px #888888;
+    	margin: auto auto auto auto;
+    	background: rgba(255, 255, 255, 0);       
 }
 #navigation {
 	margin-top: 20px;
