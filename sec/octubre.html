@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="es" lang="es" >
+    <head>
+        <title>Papeleria ALONDRA</title>
+        <meta name="description" content="papeleria e internet alondra cerca de ti y de tus necesidades en villa las palmas">
+        <meta name="keywords" content="papeleria, internet, impresiones, menudeo, villa, palmas, aguascalientes, copias, enmicados, engargolados, monografias, biografias">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta http-equiv="Content-Language" content="ES-mx" />
+        <meta http-equiv="Content-Style-Type" content="text/css" />
+        <style type="text/css">
+            #trtitulo{
+                background: rgba(168, 167, 250, 1);
+                /** 1 para fondo muy oscuro, 0 para fondo claro */
+                font-family:'Lucida Sans Unicode', 'Lucida Grande', sans-serif; 
+                font-size:22px
+            }         
+        </style>
+        <script type="text/javascript">
+            // Wait for the page to load first
+            window.onload = function() {
+              // Get a reference to the link on the page
+              // with an id of "mylink"
+              var a = document.getElementById("link1");
+              var b = document.getElementById("link2");
+              var c = document.getElementById("link3");          
+              //Set code to run when the link is clicked
+              // by assigning a function to "onclick"
+              a.onclick = function() {
+                  alert("I am an alert box!");
+                parent.parent.resizeWhiteLabelApp(document.parent.getElementById("iframe1").scrollHeight);
+                //If you don't want the link to actually 
+                // redirect the browser to another page,
+                // "google.com" in our example here, then
+                // return false at the end of this block.
+                // Note that this also prevents event bubbling,
+                // which is probably what we want here, but won't 
+                // always be the case.
+              }
+              b.onclick = function() {
+                    alert("I am an alert box!"+parent.document.getElementById("iframe1).Height);
+                parent.parent.resizeWhiteLabelApp(parent.document.getElementById("iframe1).scrollHeight);
+              }
+              c.onclick = function() {
+                  alert("I am an alert box!");
+                parent.parent.resizeWhiteLabelApp(parent.document.getElementById("iframe1").scrollHeight);
+              }
+            }
+            function jsfunction() {
+                alert("I am an alert box!");
+            }            
+        </script>        
+    </head>
+
+    <body>
+        <table id="trtitulo" width="100%" cellspacing="10" cellpadding="10">
+            <tr><td>Octubre</td></tr>
+        </table>
+        <ul>
+            </br>
+            <li><a id="link1" href="https://docs.google.com/document/d/1ks-SZQL4-IBbO4pw_68lKxMSA9z560dJW9V6XHYzcfM/pub">Leyendas del dia de Muertos</a>                
+            </br></br>
+            <li><a id="link2" href="https://docs.google.com/document/d/1NoJaAhlxkvdLcspbjUx3blTIbdqosDEHR2_DgdiVc-4/pub">Costumbres y Tradiciones de de Aguascalientes</a>
+            <br/></br>
+            <li><a onclick="jsfunction()" href="https://docs.google.com/document/d/11T_EG-pCL6EAK_tQAmQlZZAAvby3-I1FZcKPQGa9oY4/pub">El imperio de Agustín de Iturbide</a>
+            <br/></br>            
+        </ul>       
+    </body>
+</html>
