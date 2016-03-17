@@ -1,12 +1,15 @@
+/** Tamaño del Cuerpo del documento **/
 html, body {
     height:100%;
 }
+/** Estilo del Cuerpo del documento **/
+/** - Tipo de letra, Color e Imagen del Fondo **/
 body{
 	font-family: Cambria, Palatino, "Palatino Linotype", "Palatino LT STD", Georgia, serif;
-    background: #333 url(imagenes/calavera.png) repeat top left;
+    background: #A5DBF0 url(imagenes\primavera_e.png) repeat top left;
 	font-weight: 400;
 	font-size: 15px;
-	color: #f0f0f0;
+	color: #B2F941;
 	overflow-y: scroll;
 }
 /** Logo, Menu y facebook */
@@ -17,13 +20,14 @@ body{
 	width: 190px;
 	top: 0px;
 }
+/** Diseño del rectángulo que alberga el logo de la Papelería */
 #logo{
 	position: absolute;
 	z-index: 2000;
 	width: 112px;
 	height: 112px; 	
-	top: 5px;
-	left: 192px;
+	top: 9px;
+	left: 204px;
     -webkit-box-shadow:2px 2px 5px #888888;	
     box-shadow:2px 2px 5px #888888;
     border-radius: 8px;
@@ -36,94 +40,102 @@ body{
 	z-index: 2000;
 	width: 32px;
 	height: 32px; 	
-	top: 130px;
-	left: 220px;
+	top: 125px;
+	left: 230px;
     -webkit-box-shadow:2px 2px 5px #888888;	
     box-shadow:2px 2px 5px #888888;
     margin: auto auto auto auto;
     border-radius: 4px;
-    background: rgba(255, 255, 255, 1);       
+    background: rgba(255, 255, 255, 0.5);       
 }
 #facebook{
 	position: absolute;
 	z-index: 2000;
 	width: 32px;
 	height: 32px; 	
-	top: 130px;
-	left: 260px;
+	top: 125px;
+	left: 270px;
     -webkit-box-shadow:2px 2px 5px #888888;	
     box-shadow:2px 2px 5px #888888;
     margin: auto auto auto auto;
     border-radius: 4px;
-    background: rgba(255, 255, 255, 1);       
+    background: rgba(255, 255, 255, 0.5);       
 }
-/** Botones de Navegacion */
+/** Rectángulo que alberga los Botones de Navegación */
 #navigation {
+	/* margen del tope de la pantalla a donde inicia el primero de los botones de navegación del sitio */
 	margin-top: 10px;
-	width: 190px;
+	width: 200px;
 	display:block;
 	list-style:none;
 	z-index:3;
 }
+/* Bloque con los botones de navegación del sitio*/
 #navigation a{
 	color: #444;
 	display: block;
-	background: #fff;
-	background: rgba(255,255,255,0.9);
-    /** interlineado */
+	background: rgba(151,223,40,0.8);
+    /** Separación del borde de cada botón contra el centro del texto que contiene */
 	line-height: 22px;
-    /** top right bottom left */
+    /** espaciado top right bottom left */
 	padding: 0px 6px;
 	text-transform: uppercase;
-	margin-bottom: 6px;
+	/** Espacio de separación entre un botón de navegación y el otro */
+	margin-bottom: 3px;
 	box-shadow: 1px 1px 2px rgba(0,0,0,0.2);
 	font-size: 14px;
 }
+/** Color de los botones de navegación cuando el mouse esta encima de ellos */
 #navigation a:hover {
-	background: #ddd;
+	background: #F4FA58;
 }
-/** Division donde esta el contenido de la pagina */
+/** Division donde esta el contenido de la página */
 .content{
-	top: 177px;
+	top: 160px;
 	position: relative;
 	padding-bottom: 10px;
 }
+/** Configuración del Titulo de la página activa */
 .content h2{
-	font-size: 38px;
+	font-size: 36px;
 	padding: 5px 0px 10px 0px;
 	margin-top: 1px;
 	color: #fff;
 	color: rgba(255,255,255,0.9);
 	text-shadow: 0px 1px 1px rgba(0,0,0,0.3);
 }
+/** Configuración de la cabecera h3 */
 .content h3{
-	font-size: 48px;
+	font-size: 38px;
 	padding: 5px 0px 10px 0px;
 	margin-top: 0px;
 	color: #fff;
 	color: rgba(255,255,255,0.9);
 	-webkit-text-fill-color: white;
 	-webkit-text-stroke-color: black;
-	-webkit-text-stroke-width: 2.5px;		
+	-webkit-text-stroke-width: 1.5px;		
 }
+/** Configuración de la cabecera h4 */
 .content h4{
-	font-size: 16px;
+	font-size: 18px;
 	padding: 5px 0px 10px 0px;
 	margin-top: 0px;
 	color: #fff;
 	color: rgba(255,255,255,0.9);
+	background: #731745;
 	text-shadow: 0px 1px 1px rgba(0,0,0,15);
 }
+/** Configuración de la cabecera h5 */
 .content h5{
-	font-size: 16px;
-	padding: 5px;
+	font-size: 18px;
 	line-height: 24px;
 	color: #fff;
 	display: inline-block;
-	background: black;
+	background: #55512A;
 	padding: 5px;
 	margin: 3px 0px;
 }
+/** */
 .content p{
 	font-size: 18px;
 	padding: 5px;
@@ -131,12 +143,14 @@ body{
 	color: #fff;
 	text-shadow: 0px 1px 1px rgba(0,0,0,1);
 }
+/** Contenedor del navegador de Artículos */
 .dg-container{
 	height: 200px;
 	position: relative;
 }
+/** */
 .dg-wrapper{
-	width: 141px;
+	width: 241px;
 	height: 106px;
 	margin: 0 auto;
 	position: relative;
@@ -151,16 +165,18 @@ body{
 	-ms-perspective: 1000px;
 	perspective: 1000px;
 }
+/** Recuadro que contiene la imagen, la descripción y el precio del artículo **/
 .dg-wrapper a{
-	width: 146px;
-	height: 106px;
+	width: 210px;
+	height: 188px;
 	display: block;
 	position: absolute;
 	left: 0;
 	top: 0;
-	background: transparent no-repeat top left;
+	background: rgba(255,255,255,0.7) no-repeat top left;
 	box-shadow: 0px 10px 20px rgba(0,0,0,0.3);
 }
+/** Tiempos para la transicíon del Recuadro que contiene la imagen, la descripción y el precio del artículo **/
 .dg-wrapper a.dg-transition{
 	-webkit-transition: all 0.5s ease-in-out;
 	-moz-transition: all 0.5s ease-in-out;

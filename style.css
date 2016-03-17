@@ -16,10 +16,11 @@ body{
 #header{
 	position: absolute;
 	z-index: 2000;
-    	left: 0px;	
+    left: 0px;	
 	width: 205px;
 	top: 120px;
 }
+/** Diseño del rectángulo que alberga el logo de la Papelería */
 #logo{
 	position: absolute;
 	z-index: 2000;
@@ -28,12 +29,12 @@ body{
 	top: 5px;
 	left: 45px;
 	display: table-column;
-    	-webkit-box-shadow:2px 2px 5px #888888;	
-    	box-shadow:2px 2px 5px #888888;
-    	border-radius: 8px;
-    	padding:0 8px 0 8px;
-    	margin: auto auto auto auto;
-    	background: rgba(255, 255, 255, 1);       
+    -webkit-box-shadow:2px 2px 5px #888888;	
+    box-shadow:2px 2px 5px #888888;
+    border-radius: 8px;
+    padding:0 8px 0 8px;
+    margin: auto auto auto auto;
+    background: rgba(255, 255, 255, 1);       
 }
 #googleplus{
 	position: absolute;
@@ -42,10 +43,10 @@ body{
 	height: 32px; 	
 	top: 510px;
 	left: 90px;
-    	-webkit-box-shadow:2px 2px 5px #888888;	
-    	box-shadow:2px 2px 5px #888888;
-    	margin: auto auto auto auto;
-    	background: rgba(255, 255, 255, 0);       
+    -webkit-box-shadow:2px 2px 5px #888888;	
+    box-shadow:2px 2px 5px #888888;
+    margin: auto auto auto auto;
+    background: rgba(255, 255, 255, 0);       
 }
 #facebook{
 	position: absolute;
@@ -54,33 +55,40 @@ body{
 	height: 32px; 	
 	top: 560px;
 	left: 90px;
-    	-webkit-box-shadow:2px 2px 5px #888888;	
-    	box-shadow:2px 2px 5px #888888;
-    	margin: auto auto auto auto;
-    	background: rgba(255, 255, 255, 0);       
+    -webkit-box-shadow:2px 2px 5px #888888;	
+    box-shadow:2px 2px 5px #888888;
+    margin: auto auto auto auto;
+    background: rgba(255, 255, 255, 0);       
 }
+/** Rectángulo que alberga los Botones de Navegación */
 #navigation {
+	/* margen del tope de la pantalla a donde inicia el primero de los botones de navegación del sitio */	
 	margin-top: 20px;
 	width: 205px;
 	display:block;
 	list-style:none;
 	z-index:3;
 }
+/* Bloque con los botones de navegación del sitio*/
 #navigation a{
 	color: #444;
 	display: block;
-	background: #fff;
-	background: rgba(255,255,255,0.9);
+	background: rgba(151,223,40,0.8);
+    /** Separación del borde de cada botón contra el centro del texto que contiene */	
 	line-height: 50px;
+    /** espaciado top right bottom left */	
 	padding: 0px 20px;
 	text-transform: uppercase;
+	/** Espacio de separación entre un botón de navegación y el otro */	
 	margin-bottom: 6px;
 	box-shadow: 1px 1px 2px rgba(0,0,0,0.2);
 	font-size: 14px;
 }
+/** Color de los botones de navegación cuando el mouse esta encima de ellos */
 #navigation a:hover {
-	background: #ddd;
+	background: #F4FA58;
 }
+/** Division donde esta el contenido de la página */
 .content{
 	right: 40px;
 	left: 280px;
@@ -88,6 +96,7 @@ body{
 	position: absolute;
 	padding-bottom: 30px;
 }
+/** Configuración del Titulo de la página activa */
 .content h2{
 	font-size: 55px;
 	padding: 10px 0px 20px 0px;
@@ -96,6 +105,7 @@ body{
 	color: rgba(255,255,255,0.9);
 	text-shadow: 0px 1px 1px rgba(0,0,0,0.3);
 }
+/** Configuración de la cabecera h3 */
 .content h3{
 	font-size: 48px;
 	padding: 10px 0px 20px 0px;
@@ -106,24 +116,27 @@ body{
 	-webkit-text-stroke-color: black;
 	-webkit-text-stroke-width: 2.5px;		
 }
+/** Configuración de la cabecera h4 */
 .content h4{
 	font-size: 28px;
 	padding: 10px 0px 20px 0px;
 	margin-top: 0px;
 	color: #fff;
 	color: rgba(255,255,255,0.9);
+	background: #731745;	
 	text-shadow: 0px 1px 1px rgba(0,0,0,15);
 }
+/** Configuración de la cabecera h5 */
 .content h5{
 	font-size: 22px;
-	padding: 10px;
 	line-height: 24px;
 	color: #fff;
 	display: inline-block;
-	background: black;
+	background: #55512A;
 	padding: 10px;
 	margin: 3px 0px;
 }
+/** */
 .content p{
 	font-size: 22px;
 	padding: 10px;
@@ -165,10 +178,12 @@ body{
 .footnote a{
 	color: #ddd;
 }
+/** Contenedor del navegador de Artículos */
 .dg-container{
 	height: 220px;
 	position: relative;
 }
+/** */
 .dg-wrapper{
 	width: 241px;
 	height: 166px;
@@ -196,7 +211,7 @@ body{
 	background: rgba(255,255,255,0.8) no-repeat top left;
 	box-shadow: 0px 10px 20px rgba(0,0,0,0.3);
 }
-/** Tiempos para la transiciíon del Recuadro que contiene la imagen, la descripción y el precio del artículo **/
+/** Tiempos para la transicíon del Recuadro que contiene la imagen, la descripción y el precio del artículo **/
 .dg-wrapper a.dg-transition{
 	-webkit-transition: all 0.5s ease-in-out;
 	-moz-transition: all 0.5s ease-in-out;
