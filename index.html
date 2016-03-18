@@ -12,10 +12,13 @@
         <meta name="description" content="papelería e internet Alondra cerca de ti y de tus necesidades en villa las palmas">
         <meta name="keywords" content="papeleria, internet, impresiones, menudeo, villa, palmas, aguascalientes, copias, enmicados, engargolados, monografias, biografias">	
 		<link rel="shortcut icon" href="imagenes/Alondra32x32.ico"> 
+        <link rel="stylesheet" type="text/css" href="demo.css" />
+        <link rel="stylesheet" type="text/css" href="sec/enhanced.css" media="screen, handheld" />        
+        <link rel="stylesheet" type="text/css" href="style.css" media="screen  and (min-width: 40.5em)" />
         <!--[if (lt IE 9)&(!IEMobile)]>
     	<link rel="stylesheet" type="text/css" href="../style.css" />
     	<![endif]-->    
-		<script async type="text/javascript" src="js/modernizr.custom.53451.js"></script>
+		<script type="text/javascript" src="js/modernizr.custom.53451.js"></script>
         <style type="text/css">
             #trtitle{
                 background: rgba(168, 167, 250, 1);
@@ -65,8 +68,8 @@
         </header>                 
 		<!-- Home -->
 		<div id="contenido" class="content">
-        	<h2>Artículos</h2>
-			<h5>Artículos de temporada</h5>         
+        	<h2>Articulos</h2>
+			<h5>Articulos de temporada</h5>         
 			<section id="dg-container" class="dg-container">
 				<div id="destacados" class="dg-wrapper">
 <a href="#"><table><tr><td><img src="imagenes\0.jpg" id="im1"></td><td id="pr1"></td></tr><tr><td colspan="2" id="de1"></td></tr></table></a>
@@ -100,7 +103,7 @@
             </section>
 		    <section>
                 <br/><br/><br/><br/>
-                <div style="" itemscope itemtype="http://data-vocabulary.org/Organization">
+                <div itemscope itemtype="http://data-vocabulary.org/Organization">
                     En <span itemprop="name">Papelería ALONDRA</span>,  
                     nos especializamos en la atención al cliente minorista. Contamos 
                     con más de 7 años de experiencia y seguimos mejorando.
@@ -114,8 +117,8 @@
                     </span>
                 </div>            
             </section>
-    		<script async type="text/javascript" src="js/jquery.min.js"></script>
-    		<script async type="text/javascript" src="js/jquery.gallery.js"></script>
+    		<script type="text/javascript" src="js/jquery.min.js"></script>
+    		<script type="text/javascript" src="js/jquery.gallery.js"></script>
         	<script type="text/javascript">
     			$(function() {
     				$('#dg-container').gallery({
@@ -126,70 +129,61 @@
 		</div>
 		<!-- /Home -->
                     
-        <!-- Para cargar la página de la mejor manera, se debe cargar el Javascript de manera asincrona. De esta forma se habilita al navegador a cargar la página y el Javascript en paraelo. Para el mejor funcionamiento, coloque el Javascript justo antes de la etiqueta </body>. Estos es para que cuando haya terminado todas las tareas dentro del html, pero aun dentro del cuerpo del documento, entonces comience la ejecución de los scripts -->
+        <!-- Para cargar la pagina de mejor manera, se debe cargar el Javascript de manera asincrona. De esta forma se habilita al navegador a cargar la pagina y el Javascript en paraelo. Para el mejor funcionamiento, coloque el Javascript justo antes de la etiqueta </body> -->
         <script type="text/javascript">
-			<!-- Crea una llamada a un script java que se carga cuando haya cargado el documento -->
-          	(function() {
-				var po = document.createElement('script'); 
-					po.type = 'text/javascript'; 
-					po.async = true;
-					po.src = 'https://apis.google.com/js/plusone.js?onload=onLoadCallback';
-				var s = document.getElementsByTagName('script')[0]; 
-					s.parentNode.insertBefore(po, s);
-			  })();
+          (function() {
+            var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+            po.src = 'https://apis.google.com/js/plusone.js?onload=onLoadCallback';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+          })();
         </script>
-        <!-- Se puede utilizar la llamada en el evento onload cuando se usa la carga asincrona para comenzar la ejecución del Javascript justo después que todas las dependencias se hayan cargado -->
+        <!-- Se puede utilizar la llamada en el evento onload cuando se usa la carga asincrona para comenzar la ejecución del Javascript despues que todas las dependencias se hayan cargado -->
         <!-- https://developers.google.com/+/web/embedded-post/ -->
         <script type="text/javascript">
         <!--
-        <!-- Despliega las entradas desde el Alimentador JSON especificado, creando un nuevo elemento 'dl' en el DOM. Cada 'dt' es el titulo del renglon, y cada dd' es el contenido del renglon -->
+        /**
+         * Lists the entries from the specified JSON feed by creating a new 'dl' element in the DOM.
+         * Each 'dt' is the title of the row, and each 'dd' is the content of the row. 
+         */
             function listEntries(json) {
-			<!-- Función que obtiene la información de las efemerides del dia -->				
-				var div = document.getElementById('data');
-				var currentTime = new Date();
-				var dia_hoy = currentTime.getDate();
-				var mes_hoy = currentTime.getMonth();
-				var posic = 0;
-				var incluidos = 0;
+            var div = document.getElementById('data');
+            var currentTime = new Date();
+            var dia = currentTime.getDate();
+            var mes = currentTime.getMonth();
+            var posic = 0;
+            var incluidos = 0;
     
                 mes++;
-    			
+    
                 removeOldResults();
     
                 for (var i = 0; i < json.feed.entry.length; i++) {
                     var entry = json.feed.entry[i];
-                    var efemeride = entry.content.$t;
-                    var posmes = efemeride.indexOf("mes:");
-                    var posdia = efemeride.indexOf("dia:");
-                    var posnum = efemeride.indexOf("num:");               
-                    var mes_entrada = efemeride.substr(posmes+5, posdia-posmes-7);
-                    var dia_entrada = efemeride.substr(posdia+5, posnum-posdia-7);
-                    if (mes_entrada==me_hoys && dia_entrada==dia_hoy) {
+                    var precio = entry.content.$t;
+                    var posmes = precio.indexOf("mes:");
+                    var posdia = precio.indexOf("dia:");
+                    var posnum = precio.indexOf("num:");               
+                    var mese = precio.substr(posmes+5, posdia-posmes-7);
+                    var diae = precio.substr(posdia+5, posnum-posdia-7);
+                    if (mese==mes && diae==dia) {
                         incluidos++;
-                        var posyear = efemeride.indexOf("year:");
-                        var posefe = efemeride.indexOf("efemeride:");
-                        var pospais = efemeride.indexOf("pais:");
-                        var year = efemeride.substr(posyear+6, posmes-posyear-8);
+                        var posyear = precio.indexOf("year:");
+                        var posefe = precio.indexOf("efemeride:");
+                        var pospais = precio.indexOf("pais:");
+                        var year = precio.substr(posyear+6, posmes-posyear-8);
                         if (parseInt(year)==9999){
                             anio = "";
                         } else {
                             anio = year.concat(" - ");
                         }
-                        var efem = efemeride.substr(posefe+11, pospais-posefe-13);
+                        var efem = precio.substr(posefe+11, pospais-posefe-13);
                         posic++;
                         var pres = document.createElement('p');
                         pres.appendChild(document.createTextNode(anio.concat(efem)));
-    					var a = document.createElement("a");
-    					var text = document.createTextNode("Ver más");
-    					a.setAttribute("style", "text-decoration: underline;");
-    					a.setAttribute("href", "ver_mas.html");
-    					a.appendChild(text);
-    					pres.appendChild(a);							
                         div.appendChild(pres);
                     }
                 }
             }
-			<!-- Función que obtiene la información de los artículos destacados, a fin de montarla dentro del navegador de artículos destacados -->
            function handleQueryResponse(response) {
                 if (response.isError()) {
                     alert('Error in query: ' + response.getMessage() + ' ' + response.getDetailedMessage());                        
@@ -273,6 +267,3 @@
         </script>        
 	</body>
 </html>
-<link rel="stylesheet" type="text/css" href="demo.css" />
-<link rel="stylesheet" type="text/css" href="sec/enhanced.css" media="screen, handheld" />        
-<link rel="stylesheet" type="text/css" href="style.css" media="screen  and (min-width: 40.5em)" />
