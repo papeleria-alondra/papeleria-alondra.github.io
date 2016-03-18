@@ -3,13 +3,14 @@ html, body {
     height:100%;
 }
 /** Estilo del Cuerpo del documento **/
-/** - Tipo de letra, Color e Imagen del Fondo **/
+/** - Tipo de letra, Color e Imágen del Fondo, Inclute el color de la sección al final del documento que contiene los datos de la papelería **/
 body{
 	font-family: Cambria, Palatino, "Palatino Linotype", "Palatino LT STD", Georgia, serif;
 	background: #A5DBF0 url(imagenes/primavera.png) repeat top left;
 	font-weight: 400;
 	font-size: 20px;
-	color: #B2F941;
+	/* color de la fuente para todo el BODY */
+	color: #585858;
 	overflow-y: scroll;
 }
 /** Logo, Menu y facebook */
@@ -105,7 +106,7 @@ body{
 	color: rgba(255,255,255,0.9);
 	text-shadow: 0px 1px 1px rgba(0,0,0,0.3);
 }
-/** Configuración de la cabecera h3 */
+/** Configuración de la cabecera h3 --- por ejemplo el precio de los artículos en el navegador de artículos destacados */
 .content h3{
 	font-size: 48px;
 	padding: 10px 0px 20px 0px;
@@ -116,7 +117,7 @@ body{
 	-webkit-text-stroke-color: black;
 	-webkit-text-stroke-width: 2.5px;		
 }
-/** Configuración de la cabecera h4 */
+/** Configuración de la cabecera h4 --- Por ejemplo el titulo de las efemerides */
 .content h4{
 	font-size: 28px;
 	padding: 10px 0px 20px 0px;
@@ -126,17 +127,17 @@ body{
 	background: #731745;	
 	text-shadow: 0px 1px 1px rgba(0,0,0,15);
 }
-/** Configuración de la cabecera h5 */
+/** Configuración de la cabecera h5 --- Por ejemplo el Titulo Extendido de la página activa */
 .content h5{
 	font-size: 22px;
 	line-height: 24px;
 	color: #fff;
 	display: inline-block;
-	background: #55512A;
+	background: #FF411F;
 	padding: 10px;
 	margin: 3px 0px;
 }
-/** */
+/** Formato para los parafos*/
 .content p{
 	font-size: 22px;
 	padding: 10px;
@@ -186,7 +187,7 @@ body{
 /** */
 .dg-wrapper{
 	width: 241px;
-	height: 166px;
+	height: 66px;
 	margin: 0 auto;
 	position: relative;
 	-webkit-transform-style: preserve-3d;
@@ -219,6 +220,7 @@ body{
 	-ms-transition: all 0.5s ease-in-out;
 	transition: all 0.5s ease-in-out;
 }
+/** Recuadro d la imágen del artículo */
 .dg-wrapper a img{
 	display: block;
 	padding: 1px 0px 0px 1px;
@@ -238,6 +240,7 @@ body{
 .dg-wrapper a.dg-center div{
 	display: block;
 }
+/** Recuadro que contiene los botones para controlar el avance del navegador de artículos */
 .dg-container nav{
 	width: 70px;
 	position: absolute;
@@ -246,6 +249,7 @@ body{
 	left: 50%;
 	margin-left: -29px;
 }
+/** Imagen de los dos botones de control del navegador de artículos */
 .dg-container nav span{
 	text-indent: -9000px;
 	float: left;
@@ -255,9 +259,11 @@ body{
 	opacity: 0.8;
 	background: transparent url(imagenes/arrows.png) no-repeat top left;
 }
+/** cuando el cursor esta sobre uno de los botones de navegación, este se vuelve más nitido */
 .dg-container nav span:hover{
 	opacity: 1;
 }
+/** posición y separación entre los botones de navegación */
 .dg-container nav span.dg-next{
 	background-position: top right;
 	margin-left: 10px;
