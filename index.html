@@ -2,7 +2,7 @@
 <html class="no-js">
     <head>
         <script type="text/javascript" src="https://www.google.com/jsapi"></script>
-        <script type="text/javascript">
+        <script async type="text/javascript">
             google.load("visualization", '1');
         </script>        
     	<title>Papelería ALONDRA</title>
@@ -12,7 +12,6 @@
         <meta name="description" content="papelería e internet Alondra cerca de ti y de tus necesidades en villa las palmas">
         <meta name="keywords" content="papeleria, internet, impresiones, menudeo, villa, palmas, aguascalientes, copias, enmicados, engargolados, monografias, biografias">	
 		<link rel="shortcut icon" href="imagenes/Alondra32x32.ico"> 
-        <link rel="stylesheet" type="text/css" href="demo.css" />
         <link rel="stylesheet" type="text/css" href="sec/enhanced.css" media="screen, handheld" />        
         <link rel="stylesheet" type="text/css" href="style.css" media="screen  and (min-width: 40.5em)" />
         <!--[if (lt IE 9)&(!IEMobile)]>
@@ -129,7 +128,7 @@
 		</div>
 		<!-- /Home -->
                     
-        <!-- Para cargar la pagina de mejor manera, se debe cargar el Javascript de manera asincrona. De esta forma se habilita al navegador a cargar la pagina y el Javascript en paraelo. Para el mejor funcionamiento, coloque el Javascript justo antes de la etiqueta </body> -->
+        <!-- Para cargar la página de la mejor manera, se debe cargar el Javascript de manera asincrona. De esta forma se habilita al navegador a cargar la página y el Javascript en paraelo. Para el mejor funcionamiento, coloque el Javascript justo antes de la sección BODY. Estos es para que cuando haya terminado todas las tareas dentro del html, pero aun dentro del cuerpo del documento, entonces comience la ejecución de los scripts -->
         <script type="text/javascript">
           (function() {
             var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
@@ -141,15 +140,14 @@
         <!-- https://developers.google.com/+/web/embedded-post/ -->
         <script type="text/javascript">
         <!--
-        /**
-         * Lists the entries from the specified JSON feed by creating a new 'dl' element in the DOM.
-         * Each 'dt' is the title of the row, and each 'dd' is the content of the row. 
-         */
+        /** Despliega las entradas desde el Alimentador JSON especificado, creando un nuevo 
+		 *  elemento 'dl' en el DOM. Cada 'dt' es el titulo del renglon, y cada dd' es el contenido del renglon
+		 */
             function listEntries(json) {
             var div = document.getElementById('data');
             var currentTime = new Date();
-            var dia = currentTime.getDate();
-            var mes = currentTime.getMonth();
+            var dia_hoy = currentTime.getDate();
+            var mes_hoy = currentTime.getMonth();
             var posic = 0;
             var incluidos = 0;
     
@@ -159,27 +157,33 @@
     
                 for (var i = 0; i < json.feed.entry.length; i++) {
                     var entry = json.feed.entry[i];
-                    var precio = entry.content.$t;
-                    var posmes = precio.indexOf("mes:");
-                    var posdia = precio.indexOf("dia:");
-                    var posnum = precio.indexOf("num:");               
-                    var mese = precio.substr(posmes+5, posdia-posmes-7);
-                    var diae = precio.substr(posdia+5, posnum-posdia-7);
-                    if (mese==mes && diae==dia) {
+                    var efemeride = entry.content.$t;
+                    var posmes = efemeride.indexOf("mes:");
+                    var posdia = efemeride.indexOf("dia:");
+                    var posnum = efemeride.indexOf("num:");               
+                    var mes_entrada = efemeride.substr(posmes+5, posdia-posmes-7);
+                    var dia_entrada = efemeride.substr(posdia+5, posnum-posdia-7);
+                    if (mes_entrada==mes_hoy && dia_entrada==dia_hoy) {
                         incluidos++;
-                        var posyear = precio.indexOf("year:");
-                        var posefe = precio.indexOf("efemeride:");
-                        var pospais = precio.indexOf("pais:");
-                        var year = precio.substr(posyear+6, posmes-posyear-8);
+                        var posyear = efemeride.indexOf("year:");
+                        var posefe = efemeride.indexOf("efemeride:");
+                        var pospais = efemeride.indexOf("pais:");
+                        var year = efemeride.substr(posyear+6, posmes-posyear-8);
                         if (parseInt(year)==9999){
                             anio = "";
                         } else {
                             anio = year.concat(" - ");
                         }
-                        var efem = precio.substr(posefe+11, pospais-posefe-13);
+                        var efem = efemeride.substr(posefe+11, pospais-posefe-13);
                         posic++;
                         var pres = document.createElement('p');
                         pres.appendChild(document.createTextNode(anio.concat(efem)));
+    					var a = document.createElement("a");
+    					var text = document.createTextNode("Ver más");
+    					a.setAttribute("style", "text-decoration: underline;");
+    					a.setAttribute("href", "ver_mas.html");
+    					a.appendChild(text);
+    					pres.appendChild(a);						
                         div.appendChild(pres);
                     }
                 }
