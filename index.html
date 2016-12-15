@@ -1,24 +1,19 @@
 <!doctype html>
 <html class="no-js">
     <head>
-        <script type="text/javascript" src="https://www.google.com/jsapi"></script>
-        <script async type="text/javascript">
-            google.load("visualization", '1');
-        </script>        
     	<title>Papelería ALONDRA</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1" />
     	<meta name="HandheldFriendly" content="true">        
         <meta name="description" content="papelería e internet Alondra cerca de ti y de tus necesidades en villa las palmas">
         <meta name="keywords" content="papeleria, internet, impresiones, menudeo, villa, palmas, aguascalientes, copias, enmicados, engargolados, monografias, biografias">	
-		<link rel="shortcut icon" href="imagenes/Alondra32x32.ico">
+	<link rel="shortcut icon" href="imagenes/Alondra32x32.ico">
 	<link rel="stylesheet" type="text/css" href="demo.css" />		
         <link rel="stylesheet" type="text/css" href="sec/enhanced.css" media="screen, handheld" />        
         <link rel="stylesheet" type="text/css" href="style.css" media="screen  and (min-width: 40.5em)" />
         <!--[if (lt IE 9)&(!IEMobile)]>
     	<link rel="stylesheet" type="text/css" href="../style.css" />
-    	<![endif]-->    
-	<script type="text/javascript" src="js/modernizr.custom.53451.js"></script>
+    	<![endif]-->
         <style type="text/css">
             #trtitle{
                 background: rgba(168, 167, 250, 1);
@@ -37,13 +32,14 @@
         </style>
 	</head>
 	<body onload="displayResults(this.form);">
+	<!-- ONLOAD - Ejecuta un JavaScript inmediatamente después de que se ha cargado la página -->
         <header>
-        	<!-- Logo de la papeleria -->
+            <!-- Logo de la papeleria -->
             <div id="logo" style="width: 112px; height: 104px;">
                 <IMG SRC="imagenes/alondralogo.png" ALT="logo papelería ALONDRA">
             </div>
-    		<!-- /Logo de la papeleria -->        
-        	<!-- Cabecera con Navegacion -->
+    	    <!-- /Logo de la papeleria -->        
+            <!-- Cabecera con Navegacion -->
     		<div id="header">
     			<ul id="navigation">
 	    			<li><a id="link-home" href="index.html">Inicio</a></li>
@@ -117,6 +113,20 @@
                     </span>
                 </div>            
             </section>
+	</div>
+	<!-- /Home -->
+                            
+	<!-- Cargador del API de google - que permite importar de manera saimple
+	     una o más APIs, y especificar configuraciones adicionales (como lenguaje, versión de API, etc.) -->
+       	<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+		<!-- Cargar el API de Google con 2 parámetros:
+	     		Modulo - Llama especificamente al modulo que se quiere cargar
+	     		Versión -Versión especifica de la libreria
+		-->
+        	<script async type="text/javascript">
+            		google.load("visualization", '1');
+        	</script>        
+		<script type="text/javascript" src="js/modernizr.custom.53451.js"></script>
     		<script type="text/javascript" src="js/jquery.min.js"></script>
     		<script type="text/javascript" src="js/jquery.gallery.js"></script>
         	<script type="text/javascript">
@@ -126,10 +136,11 @@
     				});
     			});
             </script>           
-		</div>
-		<!-- /Home -->
-                    
-        <!-- Para cargar la página de la mejor manera, se debe cargar el Javascript de manera asincrona. De esta forma se habilita al navegador a cargar la página y el Javascript en paraelo. Para el mejor funcionamiento, coloque el Javascript justo antes de llegar al termino de la sección BODY. Estos es para que cuando haya terminado todas las tareas dentro del html, pero aun dentro del cuerpo del documento, entonces comience la ejecución de los scripts -->
+        <!-- Para cargar la página de la mejor manera, se debe cargar el Javascript de manera asincrona. 
+             De esta forma se habilita al navegador a cargar la página y el Javascript en paraelo. 
+             Para el mejor funcionamiento, coloque el Javascript justo antes de llegar al termino de la sección BODY. 
+             Estos es para que cuando haya terminado todas las tareas dentro del html, pero aun dentro del cuerpo del documento, 
+             entonces comience la ejecución de los scripts -->
         <script type="text/javascript">
           (function() {
             var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
@@ -137,7 +148,8 @@
             var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
           })();
         </script>
-        <!-- Se puede utilizar la llamada en el evento onload cuando se usa la carga asincrona para comenzar la ejecución del Javascript despues que todas las dependencias se hayan cargado -->
+        <!-- Se puede utilizar la llamada en el evento ONLOAD cuando se usa la carga asincrona 
+	     para comenzar la ejecución del Javascript despues que todas las dependencias se hayan cargado -->
         <!-- https://developers.google.com/+/web/embedded-post/ -->
         <script type="text/javascript">
         <!-- 
@@ -243,9 +255,7 @@
                 script.setAttribute('id', 'jsonScript');
                 script.setAttribute('type', 'text/javascript');
                 document.documentElement.firstChild.appendChild(script);
-
                 //removeOldJSONScriptNodes();
-
                 // Retrieve the JSON feed.
                 var opts = {sendMethod: 'auto'};
                 var url='https://docs.google.com/spreadsheet/ccc?key=1GjW7Dr3iADODmMTgrJnb9ZuZXPEj2NYWaK43PHr1Lks&usp=drive_web&gid=0#';
@@ -271,6 +281,6 @@
                 }
             }
         //-->
-        </script>        
+        </script>
 	</body>
 </html>
