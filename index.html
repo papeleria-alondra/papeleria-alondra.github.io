@@ -251,17 +251,19 @@
                 document.getElementById('trtitle').appendChild(pres);
     
                 var script = document.createElement('script');
+		// URL de la Tabla de las Efemerides localizada en el Google Drive de papeleria.alondra.sa
                 script.setAttribute('src', 'https://spreadsheets.google.com/feeds/list/0AiYZjQ6Pbl_JdDlLWXAyaTF2cE1JNVBLTWxzUHZwNVE/od6/public/values?alt=json-in-script&callback=listEntries');
                 script.setAttribute('id', 'jsonScript');
                 script.setAttribute('type', 'text/javascript');
                 document.documentElement.firstChild.appendChild(script);
-                //removeOldJSONScriptNodes();
                 // Retrieve the JSON feed.
                 var opts = {sendMethod: 'auto'};
+		// URL de la Tabla de Todos los productos localizados en el Google Drive de papeleria.alondra.sa
                 var url='https://docs.google.com/spreadsheet/ccc?key=1GjW7Dr3iADODmMTgrJnb9ZuZXPEj2NYWaK43PHr1Lks&usp=drive_web&gid=0#';
-                // Replace the data source URL on next line with your data source URL.
+		// Le indica al API de Google que visualice la tabla que le estamos indicando
                 var query = new google.visualization.Query(url, opts);
                 // Optional request to return only column C and the sum of column B, grouped by C members.
+		// De la tabla de productos, obtiene las columnas de C-Descripción, D-Precio, G-IDX siempre que H=10
                 query.setQuery('select C, D, G where H = 10');
                 query.send(handleQueryResponse);
                 
